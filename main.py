@@ -1,10 +1,11 @@
-n = 2
+n = 1
 
 
 def search(n):
     while True:
         k = 2
         f = True
+        n += 1
         while k*2 <= n:
             if n % k != 0:
                 k += 1
@@ -13,7 +14,6 @@ def search(n):
                 break
         if f == True:
             return n
-        n += 1
 
 
 while True:
@@ -21,6 +21,5 @@ while True:
     if x.lower().startswith('y'):
         n = search(n)
         print("Следующее простое число: ", n)
-        n += 1
     else:
         break
